@@ -1,20 +1,73 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<h1>zkNexus</h1>
+<p>Zero-config Vite + React demo showcasing a simple multi-step UX, prepared for GitHub Pages.</p>
 </div>
 
-# Run and deploy your AI Studio app
+## Features
 
-This contains everything you need to run your app locally.
+- React 19 + Vite 6
+- Single-file UI in `index.tsx` with step-by-step demo flow
+- Zero server dependencies; fully static build
+- GitHub Pages deployment via Actions
 
-View your app in AI Studio: https://ai.studio/apps/drive/1O7un_x6oYljSMJ86AnE8j-SosjtUQWFh
+## Quickstart
 
-## Run Locally
+Prerequisites: Node.js 18+ (tested with Node 22)
 
-**Prerequisites:**  Node.js
+1) Install dependencies
+```bash
+npm install
+```
 
+2) Run locally (Vite dev server)
+```bash
+npm run dev
+```
+The app will be available at `http://localhost:5173/`.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+3) Production build
+```bash
+npm run build
+```
+Output is written to `dist/`.
+
+4) Preview the production build
+```bash
+npm run preview
+```
+
+## Deploy to GitHub Pages
+
+This repo is configured to deploy from GitHub Actions on pushes to `main`.
+
+- Base path is set in `vite.config.ts` as `base: '/zkNexus/'`.
+- Workflow: `.github/workflows/deploy.yml`
+
+Steps:
+1) Push to `main`:
+```bash
+git add .
+git commit -m "chore: deploy"
+git push
+```
+2) In GitHub → Settings → Pages: set Source = GitHub Actions.
+3) Watch the Actions tab for the “Deploy Vite app to GitHub Pages” run.
+
+When complete, your site is served from:
+```
+https://sakthiaadhavan9411-creator.github.io/zkNexus/
+```
+
+## Troubleshooting
+
+- Blank page on Pages: ensure `base` in `vite.config.ts` matches your repo name (`/zkNexus/`).
+- Rollup optional deps on Windows: if you see errors about `@rollup/rollup-win32-x64-msvc`, run `rm -rf node_modules package-lock.json` and `npm install` again.
+- PowerShell execution policy blocking `npm`: use `npm.cmd` instead of `npm`.
+
+## Tech Stack
+
+- Vite • React • TypeScript
+
+## License
+
+MIT © 2025
