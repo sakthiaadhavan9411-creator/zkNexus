@@ -203,6 +203,7 @@ const App = () => {
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
+            minHeight: '100vh',
             padding: '20px',
             boxSizing: 'border-box'
         }}>
