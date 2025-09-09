@@ -21,33 +21,32 @@ const App = () => {
         card: {
             backgroundColor: 'var(--surface-color)',
             borderRadius: '16px',
-            padding: '40px',
-            width: '90%',
-            maxWidth: '420px',
+            padding: 'clamp(20px, 5vw, 40px)',
+            width: 'min(92vw, 560px)',
             boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)',
             border: '1px solid var(--border-color)',
             textAlign: 'center',
             animation: 'fadeIn 0.5s ease-in-out',
         },
         title: {
-            fontSize: '24px',
+            fontSize: 'clamp(20px, 2.4vw + 1rem, 28px)',
             fontWeight: 700,
-            marginBottom: '16px',
+            marginBottom: 'clamp(10px, 2vw, 16px)',
             color: 'var(--text-primary)',
         },
         description: {
-            fontSize: '16px',
+            fontSize: 'clamp(14px, 1.5vw + 0.6rem, 16px)',
             color: 'var(--text-secondary)',
             lineHeight: '1.6',
-            marginBottom: '32px',
+            marginBottom: 'clamp(16px, 4vw, 28px)',
         },
         button: {
             backgroundColor: 'var(--primary-color)',
             color: '#fff',
             border: 'none',
             borderRadius: '8px',
-            padding: '14px 24px',
-            fontSize: '16px',
+            padding: 'clamp(12px, 1.2vw + 0.6rem, 16px) clamp(16px, 2vw + 0.5rem, 24px)',
+            fontSize: 'clamp(14px, 1.4vw + 0.6rem, 16px)',
             fontWeight: 500,
             cursor: 'pointer',
             transition: 'background-color 0.2s, transform 0.2s',
@@ -153,9 +152,9 @@ const App = () => {
                     <div style={commonStyles.card}>
                         <h2 style={commonStyles.title}>Welcome to zkPass</h2>
                         <p style={commonStyles.description}>Your secure, self-custody wallet is ready. All the complexity of Web3 is handled for you.</p>
-                        <div style={{ backgroundColor: '#111', borderRadius: '8px', padding: '20px', margin: '20px 0'}}>
+                        <div style={{ backgroundColor: '#111', borderRadius: '8px', padding: 'clamp(14px, 3vw, 20px)', margin: 'clamp(14px, 3vw, 20px) 0'}}>
                             <p style={{ margin: 0, color: 'var(--text-secondary)'}}>Your Balance</p>
-                            <p style={{ margin: '8px 0 0', fontSize: '28px', fontWeight: '700'}}>0.5 ETH</p>
+                            <p style={{ margin: '8px 0 0', fontSize: 'clamp(22px, 2vw + 1rem, 28px)', fontWeight: '700'}}>0.5 ETH</p>
                         </div>
                         <button style={commonStyles.button} onClick={() => handleNextStep(5, 2500, 'Sending transaction via relayer...')}>Perform Gas-Free Action</button>
                         <button style={{...commonStyles.button, backgroundColor: 'transparent', border: '1px solid var(--primary-color)', color: 'var(--primary-color)'}} onClick={() => handleNextStep(6, 1000, '')}>Learn about Social Recovery</button>
