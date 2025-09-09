@@ -3,6 +3,13 @@
 <p>Zero-config Vite + React demo showcasing a simple multi-step UX, prepared for GitHub Pages.</p>
 </div>
 
+## Importance
+
+- Modern onboarding demo: simple, low-friction multi-step flow (login → secure setup → dashboard) you can reuse for product tours, prototypes, or landing pages.
+- Zero backend: fully static React + Vite build; easy to host on GitHub Pages or any static host.
+- Mobile-first: responsive layout with fluid typography and spacing for phones to desktops.
+- Fast iteration: single-file UI (`index.tsx`) makes copy and flow changes very quick for demos and hackathons.
+
 ## Features
 
 - React 19 + Vite 6
@@ -10,7 +17,7 @@
 - Zero server dependencies; fully static build
 - GitHub Pages deployment via Actions
 
-## Quickstart
+## Run locally
 
 Prerequisites: Node.js 18+ (tested with Node 22)
 
